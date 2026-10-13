@@ -4,6 +4,8 @@
 
 Работает как [Agent Skill](https://agentskills.io) (формат `SKILL.md`) в Claude Code, Claude Desktop, Codex, Cursor, Copilot и других агентах, а также как системный промпт в ChatGPT, Gemini и любом чате.
 
+![Демо: скилл находит стоп-слова и выдаёт правленый текст](assets/demo.gif)
+
 **Теги:** инфостиль, Ильяхов, редактура, сокращение текста, канцелярит, стоп-слова, деловая переписка · *Russian infostyle editor, text tightening, copywriting skill for Claude / ChatGPT / Gemini*
 
 ---
@@ -40,7 +42,14 @@
 
 ### Claude Code
 
-Глобально, для всех проектов:
+Через marketplace плагинов, с обновлениями одной командой:
+
+```
+/plugin marketplace add andrey-fractal/make-it-short
+/plugin install make-it-short@make-it-short
+```
+
+Или клоном, глобально для всех проектов:
 
 ```bash
 git clone https://github.com/andrey-fractal/make-it-short ~/.claude/skills/make-it-short
@@ -52,7 +61,7 @@ git clone https://github.com/andrey-fractal/make-it-short ~/.claude/skills/make-
 git clone https://github.com/andrey-fractal/make-it-short .claude/skills/make-it-short
 ```
 
-Или через [skills CLI](https://skills.sh):
+Через [skills CLI](https://skills.sh):
 
 ```bash
 npx skills add andrey-fractal/make-it-short
@@ -117,9 +126,11 @@ reference/checklist.md    — чек-лист самопроверки
 examples/before-after.md  — примеры правок на трёх уровнях
 dist/system-prompt.md     — всё в одном файле для чатов без поддержки скиллов
 dist/chatgpt-instructions.md — короткая версия для Custom GPT (лимит 8000 знаков)
+.claude-plugin/marketplace.json — marketplace для /plugin install в Claude Code
+scripts/make_demo_gif.py  — генератор assets/demo.gif
 ```
 
-`dist/` собирается из исходников: `python3 build.py`.
+`dist/` собирается из исходников: `python3 build.py`. GIF: `python3 scripts/make_demo_gif.py`.
 
 ---
 

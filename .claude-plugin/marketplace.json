@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "make-it-short",
+  "description": "Скилл «Пиши, сокращай»: редактор русского текста в инфостиле",
+  "owner": {
+    "name": "andrey-fractal",
+    "url": "https://github.com/andrey-fractal"
+  },
+  "plugins": [
+    {
+      "name": "make-it-short",
+      "description": "Редактирует русский текст по методу книги «Пиши, сокращай» (Ильяхов, Сарычева): убирает стоп-слова, канцелярит и воду, переписывает в мире читателя. Уровни light / normal / hard.",
+      "version": "1.0.0",
+      "author": { "name": "andrey-fractal" },
+      "homepage": "https://github.com/andrey-fractal/make-it-short",
+      "repository": "https://github.com/andrey-fractal/make-it-short",
+      "license": "MIT",
+      "keywords": ["infostyle", "russian", "writing", "editing", "copywriting", "инфостиль", "ильяхов"],
+      "category": "productivity",
+      "source": "./",
+      "strict": false,
+      "skills": ["./"]
+    }
+  ]
+}
