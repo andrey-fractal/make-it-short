@@ -127,7 +127,7 @@ def frame(cmd_chars=0, show_orig=False, hl=0, dim_orig=False, legend=None,
         by0 = y
         by1 = by0 + 56 * S + LH * len(res_lines) + 12 * S
         d.rounded_rectangle([bx0, by0, bx1, by1], radius=12 * S, outline=BOX, width=2 * S)
-        d.text((bx0 + 20 * S, by0 + 18 * S), "Правленый текст · normal · 52 → 31 слово",
+        d.text((bx0 + 20 * S, by0 + 18 * S), "Правленый текст · normal · 43 → 29 слов",
                font=f_small, fill=MUTED)
         label = "Скопировано" if copied else "Копировать"
         lw = f_small.getlength(label)
